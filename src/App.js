@@ -4,6 +4,7 @@ import {useState} from "react";
 import Home from './Components/Home';
 import About from './Components/About';
 import Profilee from './Components/Profile';
+import ShowSelectedPage from './Components/ShowSelectedPage';
 
 function App() {
 
@@ -16,9 +17,11 @@ function App() {
       <br></br>
       <br></br>
      {displayComponent}
-     <Home/>
+     
+     <ShowSelectedPage displayComponent={displayComponent}/>
+     {/* <Home/>
      <About/>
-     <Profilee/>
+     <Profilee/> */}
     </div>
   );
 }
