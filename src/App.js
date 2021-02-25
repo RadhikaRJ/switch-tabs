@@ -1,9 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState} from "react";
-import Home from './Components/Home';
-import About from './Components/About';
-import Profilee from './Components/Profile';
+
 import ShowSelectedPage from './Components/ShowSelectedPage';
 
 function App() {
@@ -19,9 +17,7 @@ function App() {
      {displayComponent}
      
      <ShowSelectedPage displayComponent={displayComponent}/>
-     {/* <Home/>
-     <About/>
-     <Profilee/> */}
+    
     </div>
   );
 }
