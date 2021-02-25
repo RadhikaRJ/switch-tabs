@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
+import Home from './Components/Home';
+import About from './Components/About';
+import Profilee from './Components/Profile';
 
 function App() {
+
+  const [displayComponent,setdisplayComponent]= useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={()=>setdisplayComponent("Home")}>Home</button><span> </span>
+      <button onClick={()=>setdisplayComponent("About")}>About</button><span> </span>
+      <button onClick={()=>setdisplayComponent("Profile")}>Profile</button>
+      <br></br>
+      <br></br>
+     {displayComponent}
+     <Home/>
+     <About/>
+     <Profilee/>
     </div>
   );
 }
